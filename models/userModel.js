@@ -1,4 +1,4 @@
-import mongoose, { Mongoose, model } from 'mongoose';
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -29,4 +29,9 @@ const userSchema = new mongoose.Schema({
     }
 },{timestamps: true});
 
+/*
+    Role:
+        0: User,
+        1: Administrator
+*/
 export default mongoose.model('users', userSchema);

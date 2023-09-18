@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+font-family: 'Acme', sans-serif;
+font-family: 'Fuggles', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Montserrat', sans-serif; 
+*/
+/* TODO: Add theme change css P[0]*/
+
+/* body {
+    background-color: rgb(45, 45, 45);
+    color: azure;
+} */
+
+.navbar {
+    font-family: "Indie Flower", cursive;
+    font-size: 17px;
+    line-height: 26px;
+    /* text-transform: uppercase; */
+    /* box-shadow: 0 8px 6px -6px gray;
+    --webkit-box-shadow: 0 8px 6px -6px gray; */
+    border-bottom: solid gray !important;
+}
+
+.nav-link {
+    font-weight: 300;
+}
+
+.active {
+    border-bottom: 2px solid gray !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-family: "Fuggles", cursive;
+    font-size: 24px;
+}
+.navbar-brand > span {
+    font-size: 40px;
+}
+#slice1 {
+    transform: rotateZ(170deg);
+}
+/* =======================================
+================= About ==================
+==========================================
+*/
+.about::before{
+    content: '';
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    background-image: url("../public/images/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 60%;
+    opacity: 0.5;
+    filter: blur(20px);
+    z-index: -1;
+}
+.about {
+    position: relative;
+    min-height: 70vh;
+    line-height: 2rem;
+    font-family: 'Indie Flower', cursive;
+}
+.about > div > h1 {
+    /* margin-top: 3rem; */
+    margin-bottom: 2rem;
+
+}
+.about > div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about>div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+.about > div > img {
+    height: 70vh;
+    
+}
+@media (max-width: 768px) {
+    
+}
+
+/* =======================================
+============== Contact Us ================
+==========================================
+*/
+.contact-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    min-width: 90%;
+    min-height: 100%;
+    background-image: url("../public/images/contactus.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 60%;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 10px 10px white;
+    border: 1px white solid;
+    z-index: -1;
+}
+@media (max-width: 768px) {
+    .contact-us::before {
+        min-width: 100%;
+        border-radius: 0px;
+        box-shadow: inset 0px -10px 10px white;
+    }
+}
+.contact-us {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.4);
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* outline: 2px red solid; */
+}
+.contact-us > .rhs {
+    background: rgba(0, 0, 0, 0.59);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    padding: 40px;
+    margin: 20px;
+    font-family: "Indie Flower", cursive;
+
+    /* color: black; */
+}
+.contact-us > .rhs > h1 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* =======================================
+================= Policy =================
+==========================================
+*/
+.policy {
+    border-left: 2px solid rgba(0, 0, 0, 0.5);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.policy > p {
+    margin-top: 0.5rem;
+}
+.policy > *{
+    margin-top: 2rem;
+}
+
+
+/* =======================================
+=========== Page Not Found ===============
+==========================================
+*/
+.pnf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: inherit;
+    font-family: "Acme", sans-serif;
+}
+.pnf-title {
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+.pnf-heading {
+    letter-spacing: 5px;
+}
+.pnf-btn {
+    text-decoration: none;
+    color: blue;
+    font-weight: 700;
+    border: 3px dotted blue;
+    padding: 10px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* =======================================
+=============== Footer ===================
+==========================================
+*/
+.footer {
+    /* background: -webkit-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 1)
+    );
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 1)
+    ); */
+
+    min-height: inherit;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Indie Flower", cursive;
+}
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+}
+.footer a:hover {
+    color: antiquewhite;
+    border-bottom: 1px solid antiquewhite;
+}
