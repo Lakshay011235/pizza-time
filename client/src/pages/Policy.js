@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Policy() {
     return (
-        <Layout>
+        <Layout title={"Policy | Pizza-time App"}>
             <div className="row">
                 <div className="col-lg-8 offset-lg-2 policy">
                     <h1>Privacy Policy</h1>

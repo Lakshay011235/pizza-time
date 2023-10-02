@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function About() {
     return (
-        <Layout>
+        <Layout title={'About us | Pizza-time App'}>
             <div className="row about">
                 <div className="col-lg-6">
                     <img

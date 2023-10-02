@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-family: 'Indie Flower', cursive; */
 }
 /* 
 font-family: 'Acme', sans-serif;
@@ -45,6 +46,15 @@ font-family: 'Montserrat', sans-serif;
 #slice1 {
     transform: rotateZ(170deg);
 }
+
+.page-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+}
+
 /* =======================================
 ================= About ==================
 ==========================================

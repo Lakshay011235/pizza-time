@@ -2,6 +2,7 @@ import userModel from "../models/userModel.js";
 import { comparePassword, hashPassword } from "./../helpers/authHelper.js";
 import JWT from "jsonwebtoken";
 
+//POST REGISTER
 export const registerController = async (req, res) => {
     try {
         const { name, email, password, phone, address } = req.body;
@@ -9,19 +10,19 @@ export const registerController = async (req, res) => {
         //validation
         //TODO:: Add SQL injection check
         if (!name) {
-            return res.send({ error: "Invalid Name @ Registration" });
+            return res.send({ message: "Invalid Name @ Registration" });
         }
         if (!email) {
-            return res.send({ error: "Invalid Email @ Registration" });
+            return res.send({ message: "Invalid Email @ Registration" });
         }
         if (!password) {
-            return res.send({ error: "Invalid Password @ Registration" });
+            return res.send({ message: "Invalid Password @ Registration" });
         }
         if (!phone) {
-            return res.send({ error: "Invalid Phone @ Registration" });
+            return res.send({ message: "Invalid Phone @ Registration" });
         }
         if (!address) {
-            return res.send({ error: "Invalid Address @ Registration" });
+            return res.send({ message: "Invalid Address @ Registration" });
         }
 
         //check user
@@ -30,7 +31,7 @@ export const registerController = async (req, res) => {
         //existing user
         if (existingUser) {
             return res.status(200).send({
-                success: true,
+                success: false,
                 message: "Already registered, please login",
             });
         }
@@ -67,7 +68,7 @@ export const loginController = async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        //validation
+        // validation
         // TODO:: add SQL security
         if (!email || !password) {
             return res.status(404).send({
